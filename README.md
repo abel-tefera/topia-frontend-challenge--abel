@@ -9,7 +9,7 @@
     A Frontend Coding Challenge from Topia. Done by Abel.
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://topia-challenge.abeltb.xyz/">View Demo</a>
     
   </p>
 </div>
@@ -18,7 +18,7 @@
 
 ## About The Project
 
-  [<img src="public/demo.gif"/>](public/demo.gif)
+[<img src="public/demo.gif"/>](public/demo.gif)
 
 This project demonstrates a simple replica of the core algoritm used in Topia's spatial communication software.
 
@@ -85,7 +85,7 @@ You must have a package manager like npm installed.
 
 Abel Tefera - [@linkedin](https://www.linkedin.com/in/abel-t-belay/) - abeltefera16@gmail.com
 
-Project Link: [https://github.com/abel-tefera/topia-frontend-challenge--abel](https://github.com/abel-tefera/topia-frontend-challenge--abel)
+Project Demo Link: [Live Demo](https://topia-challenge.abeltb.xyz/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
