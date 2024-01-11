@@ -8,7 +8,7 @@ interface UserListProps {
 }
 
 export const UserList: React.FC<UserListProps> = ({ usersInView }) => {
-  // I've avoided setting usersInView here to avoid sharing state between components
+  // I've avoided setting usersInView here to avoid sharing state between components and keeping things simple
   // App.js is the wrapper of the Modal and UserList components.
   // The common states and form submission logic are placed in App.js
   // The UsersInView object is passed down here via props

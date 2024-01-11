@@ -1,6 +1,7 @@
 import { USER_LIST_TYPE } from "./constants";
 
 export type UsersInViewType = {
+  id: number,
   username: string;
   is_broadcaster: boolean;
   distance: number;
@@ -17,13 +18,23 @@ export default function listUsersInView(
 
   // WRITE SOLUTION BELOW. ADD USERNAME AND IS_BROADCASTER TO 'usersInView' IF USER FALLS INTO VISIBLE RANGE
 
+  // (Edge case) If the screen height or width is 0, return an empty array.
   if (screenHeight <= 0 || screenWidth <= 0) return [];
+
+  // Find the viewport bounds. The viewport is a rectangle with the user's
+  // avatar at the center. The viewport bounds are the edges of the viewport.
+
   const viewportTop = positionY - screenHeight / 2;
   const viewportBottom = positionY + screenHeight / 2;
   const viewportLeft = positionX - screenWidth / 2;
   const viewportRight = positionX + screenWidth / 2;
 
   for (const value of Object.values(users)) {
+
+    // A avatar has height 125px and width 50px.
+    // x & y are the coordinates of the center of the avatar.
+    // The bounds are the edges of the avatar.
+
     const topBound = value.y - 125 / 2;
     const bottomBound = value.y + 125 / 2;
     const leftBound = value.x - 50 / 2;
@@ -46,6 +57,7 @@ export default function listUsersInView(
       );
       
       usersInView.push({
+        id: value.id,
         username: value.username,
         is_broadcaster: value.is_broadcaster,
         distance: Math.round(distance),

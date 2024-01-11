@@ -29,7 +29,7 @@ export default function VisibleUsersTable({
         <TableBody>
           {usersList.map((user) => (
             <TableRow
-              key={user.username}
+              key={user.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">

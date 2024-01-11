@@ -7,7 +7,6 @@ import {
   Link,
   Typography,
 } from "@mui/material";
-import "./App.css";
 import { UserList } from "./components/UserList";
 import { useState } from "react";
 import InputModal, { FormData } from "./components/InputModal";
@@ -17,9 +16,11 @@ import { USER_LIST } from "./utils/constants";
 const App = () => {
   const [xPosition, setXPosition] = useState(800);
   const [yPosition, setYPosition] = useState(400);
-  const [screenWidth, setScreenWidth] = useState(800);
-  const [screenHeight, setScreenHeight] = useState(400);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
 
+  // Run this function on initial render to get the users in view
+  // based on the initial state of the screen
   const initalUsersInView = listUsersInView(
     USER_LIST,
     xPosition,
@@ -64,12 +65,13 @@ const App = () => {
         flexDirection={"row"}
         justifyContent={"space-between"}
         alignItems={"center"}
+        bgcolor={"#F3F3FF"}
       >
         <Link href={"https://topia.io/"} target="_blank">
-          <img alt={"Topia"} src="Topia_Logo.png" />
+          <img height={50} alt={"Topia"} src="Topia_Logo.png" />
         </Link>
-        <Typography variant="h4" gutterBottom>
-          Frontend Engineering Challenge
+        <Typography variant="h4" gutterBottom marginX={3}>
+          Frontend Coding Challenge
         </Typography>
         <IconButton href={"https://abeltb.xyz/"} target="_blank">
           <Avatar
