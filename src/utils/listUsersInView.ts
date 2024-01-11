@@ -23,7 +23,7 @@ export default function listUsersInView(
   const viewportLeft = positionX - screenWidth / 2;
   const viewportRight = positionX + screenWidth / 2;
 
-  for (const [key, value] of Object.entries(users)) {
+  for (const value of Object.values(users)) {
     const topBound = value.y - 125 / 2;
     const bottomBound = value.y + 125 / 2;
     const leftBound = value.x - 50 / 2;
@@ -46,7 +46,7 @@ export default function listUsersInView(
       );
       
       usersInView.push({
-        username: key,
+        username: value.username,
         is_broadcaster: value.is_broadcaster,
         distance: Math.round(distance),
       });

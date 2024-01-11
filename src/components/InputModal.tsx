@@ -73,7 +73,7 @@ const InputModal: React.FC<InputModalProps> = ({
         <Grid display="flex" flexDirection="row">
           <Box component="form" onSubmit={handleSubmit}>
             <Grid container>
-              <Grid xs={5} display={"flex"} flexDirection={"column"}>
+              <Grid item xs={5} display={"flex"} flexDirection={"column"}>
                 <Typography>Position</Typography>
                 <Grid item>
                   <TextField
@@ -98,8 +98,8 @@ const InputModal: React.FC<InputModalProps> = ({
                   />
                 </Grid>
               </Grid>
-              <Grid xs={2}></Grid>
-              <Grid xs={5} display={"flex"} flexDirection={"column"}>
+              <Grid item xs={2}></Grid>
+              <Grid item xs={5} display={"flex"} flexDirection={"column"}>
                 <Typography>Screen Size (px)</Typography>
                 <Grid item>
                   <TextField

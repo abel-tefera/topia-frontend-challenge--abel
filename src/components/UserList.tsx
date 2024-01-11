@@ -1,21 +1,17 @@
-import React, { useState } from "react";
-import listUsersInView, { UsersInViewType } from "../utils/listUsersInView";
+import React from "react";
+import { UsersInViewType } from "../utils/listUsersInView";
 import { Box, Container, Typography } from "@mui/material";
 import VisibleUsersTable from "./VisibleUsersTable";
-// import Container from "@material-ui/core/Container";
-// import Typography from "@material-ui/core/Typography";
-// import Box from "@material-ui/core/Box";
 
 interface UserListProps {
   usersInView: UsersInViewType;
 }
 
 export const UserList: React.FC<UserListProps> = ({ usersInView }) => {
-  // const [usersInView, setUsersInView] = useState([]);
-
-  // TODO: Create a Modal component with inputs for position and screen size (screen size should default to actual window width and height but be editable).
-  // CTA in Modal should close modal, call listUsersInView with updated values, and update usersInView
-  // Add a list of the users in view in the render statement below
+  // I've avoided setting usersInView here to avoid sharing state between components
+  // App.js is the wrapper of the Modal and UserList components.
+  // The common states and form submission logic are placed in App.js
+  // The UsersInView object is passed down here via props
 
   return (
     <Container maxWidth="md">

@@ -17,8 +17,8 @@ import { USER_LIST } from "./utils/constants";
 const App = () => {
   const [xPosition, setXPosition] = useState(800);
   const [yPosition, setYPosition] = useState(400);
-  const [screenWidth, setScreenWidth] = useState(10000);
-  const [screenHeight, setScreenHeight] = useState(10000);
+  const [screenWidth, setScreenWidth] = useState(800);
+  const [screenHeight, setScreenHeight] = useState(400);
 
   const initalUsersInView = listUsersInView(
     USER_LIST,
@@ -66,7 +66,7 @@ const App = () => {
         alignItems={"center"}
       >
         <Link href={"https://topia.io/"} target="_blank">
-          <img alt={"Topia"} src="public/Topia_Logo.png" />
+          <img alt={"Topia"} src="Topia_Logo.png" />
         </Link>
         <Typography variant="h4" gutterBottom>
           Frontend Engineering Challenge
@@ -79,7 +79,7 @@ const App = () => {
         </IconButton>
       </Box>
       <Grid display="flex" flexDirection="row" container spacing={2}>
-        <Grid display="flex" flexDirection="column" xs>
+        <Grid item display="flex" flexDirection="column" xs>
           <Grid
             display={"flex"}
             flexDirection={"row"}
@@ -124,7 +124,7 @@ const App = () => {
           </Button>
         </Grid>
 
-        <Grid display="flex" flexDirection="row" xs>
+        <Grid item display="flex" flexDirection="row" xs>
           <UserList usersInView={usersInView} />
         </Grid>
         <InputModal
